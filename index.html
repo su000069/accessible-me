@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accessible Me</title>
+  <meta itemprop="name" content="JamBox Music Studio">
+<meta itemprop="description" content="A creative space for recording, rehearsing and producing music.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
@@ -13,55 +15,67 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="container">
-    <div class="site-header">
-      <h1>Jam Box Studios</h1>
-      <div class="main-nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
-        </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
-    </div>
-    <div class="main-content">
+    <header class="site-header" role="banner">
+  <h1>Jam Box Studios</h1>
+  <nav class="main-nav" role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Reservation</a></li>
+      <li><a href="#">Studio</a></li>
+    </ul>
+  </nav>
+  <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="banner" alt="Promotional image of Jam Box studio">
+</header>
+
+   <main class="main-content" id="main-content" role="main">
+
       <h1>Welcome to Jam Box</h1>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
-      <div class="owner">
-        <h1>Meet the owner</h1>
-        <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
-        </ul>
-        <h1>Address</h1>
-        <p>
-          Jambox Studios
-          123 Guitar Road,
-          Musicville, Danceistan
-          B3T 0L0
-        </p>
-      </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
-        <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
-          <b>Your Message</b>
-          <textarea></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </div>
-    <div class="site-footer">
-      &copy; 2021 Jam Box Studios
-    </div>
+        <section class="owner-info" aria-labelledby="owner-heading">
+  <h2 id="owner-heading">Meet the Owner</h2>
+  <ul>
+    <li><strong>Name:</strong> John Doe</li>
+    <li><strong>Title:</strong> CEO</li>
+    <li><strong>Email:</strong> <a href="mailto:johnjoe@jambox.ca">johnjoe@jambox.ca</a></li>
+    <li><strong>Phone:</strong> <a href="tel:6130000000">613-000-0000</a></li>
+  </ul>
+  <h3>Studio Address</h3>
+  <address>
+    JamBox Studios<br>
+    123 Guitar Road<br>
+    Musicville, Danceistan<br>
+    B3T 0L0
+  </address>
+</section>
+
+  <section class="contact-section" aria-labelledby="contact-heading">
+  <h2 id="contact-heading">Contact Us</h2>
+  <form action="thanks.html">
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Let us know what it's about" required>
+
+    <label for="message">Your Message</label>
+    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+    <button type="submit">Send </button>
+  </form>
+  </section>
+   </main>
+
+    <footer class="site-footer" role="contentinfo">
+  &copy; 2025 Jam Box Studios
+    </footer>
+
   </div>
 </body>
 
